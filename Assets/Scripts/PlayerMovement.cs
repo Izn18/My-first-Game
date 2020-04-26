@@ -7,6 +7,9 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public Rigidbody rb;
+
+    public float movementSpeed = 2000f;
+    public float steeringSpeed = 100f;
     
     // Start is called before the first frame update
     void Start()
@@ -23,6 +26,19 @@ public class PlayerMovement : MonoBehaviour
     // Fixed Update is used for Physics stuff
     private void FixedUpdate()
     {
-        rb.AddForce(0, 0, 2000 * Time.deltaTime);
+        // Add constant movement in z
+        rb.AddForce(0, 0, movementSpeed * Time.deltaTime);
+
+        // Steer to the right by pressing the "D" button
+        if (Input.GetKey("d"))
+        {
+            rb.AddForce(steeringSpeed * Time.deltaTime,0,0, ForceMode.VelocityChange);
+        }
+        
+        // Steer to the left by pressing the "A" button
+        if (Input.GetKey("a"))
+        {
+            rb.AddForce(-steeringSpeed * Time.deltaTime,0,0, ForceMode.VelocityChange);
+        }
     }
 }
