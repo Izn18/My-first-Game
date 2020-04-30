@@ -27,8 +27,13 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         // Add constant movement in z
-        rb.AddForce(0, 0, movementSpeed * Time.deltaTime);
+        //rb.AddForce(0, 0, movementSpeed * Time.deltaTime);
 
+        if (Input.GetKey("w"))
+        {
+            rb.AddForce(0,0,steeringSpeed * Time.deltaTime, ForceMode.VelocityChange);
+        }
+        
         // Steer to the right by pressing the "D" button
         if (Input.GetKey("d"))
         {

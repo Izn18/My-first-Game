@@ -19,7 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a385877-bafc-446c-bff4-e3063c36b5a4" name="Default Changelist" comment="" />
+    <list default="true" id="6a385877-bafc-446c-bff4-e3063c36b5a4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.My-first-Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.My-first-Game/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/ObstacleMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/ObstacleMaterial.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Physics Materials/Slippery.physicMaterial" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Physics Materials/Slippery.physicMaterial" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -78,7 +83,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1587918955783</updated>
-      <workItem from="1587918964162" duration="5045000" />
+      <workItem from="1587918964162" duration="5952000" />
+      <workItem from="1588160591370" duration="1846000" />
+      <workItem from="1588256653628" duration="1974000" />
     </task>
     <servers />
   </component>
@@ -97,6 +104,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
