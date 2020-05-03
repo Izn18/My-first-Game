@@ -38,7 +38,6 @@ public class PlayerMovement : MonoBehaviour
         if (rb.position.y < 0.75f)
         {
             movement.enabled = false;
-            FindObjectOfType<GameManager>().EndGame();
         }
     }
 }
