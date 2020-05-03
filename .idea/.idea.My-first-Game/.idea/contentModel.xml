@@ -10,6 +10,8 @@
         <e p="Scripts" t="Include">
           <e p="EndpointTrigger.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
+          <e p="GameOver.cs" t="Include" />
+          <e p="LevelComplete.cs" t="Include" />
           <e p="PlayerCollision.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
           <e p="Score.cs" t="Include" />

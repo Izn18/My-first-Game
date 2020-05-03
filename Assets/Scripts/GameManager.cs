@@ -7,9 +7,11 @@ public class GameManager : MonoBehaviour
     private bool gameOver = false;
     private float restartTimer = 3f;
 
-    public void finished()
+    public GameObject finishedUi;
+
+    public void LevelComplete()
     {
-        Debug.Log("Finished!");
+        finishedUi.SetActive(true);
     }
 
     public void EndGame()
@@ -22,7 +24,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void Restart()
+    private void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
