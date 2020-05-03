@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-// Behaviour for Collisions
+// Is responsible for checking for Player Collisions with Obstacles
 public class PlayerCollision : MonoBehaviour
 {
     

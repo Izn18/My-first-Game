@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// Class that is responsible to manage the Player Movement
 public class PlayerMovement : MonoBehaviour
 {
 
@@ -16,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
         // Add constant movement in z
         rb.AddForce(0, 0, movementSpeed * Time.deltaTime);
 
+        
+        // Testing the Speed of the Player
         //if (Input.GetKey("w"))
         //{
         //    rb.AddForce(0,0,steeringSpeed * Time.deltaTime, ForceMode.VelocityChange);
@@ -33,6 +36,8 @@ public class PlayerMovement : MonoBehaviour
             rb.AddForce(-steeringSpeed * Time.deltaTime,0,0, ForceMode.VelocityChange);
         }
 
+        // Check if the Player is still on the Ground
+        // If not the GameOverScene is called
         if (rb.position.y < 0.75f)
         {
             movement.enabled = false;
@@ -40,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
     
+    // Changes the Scene to the Game Over Screen
     void GameOverScene()
     {
         SceneManager.LoadScene(1);
