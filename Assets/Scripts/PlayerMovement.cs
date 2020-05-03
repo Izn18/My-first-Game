@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
@@ -10,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody rb;
     public PlayerMovement movement;
 
-    public float movementSpeed = 2000f;
+    public float movementSpeed = 1f;
     public float steeringSpeed = 100f;
 
     // Fixed Update is used for Physics stuff

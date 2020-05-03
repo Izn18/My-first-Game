@@ -1,14 +1,15 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// Behaviour for Collisions
 public class PlayerCollision : MonoBehaviour
 {
-    public PlayerMovement movement;
     
-    // Stops Player Movement, after Collision with an Obstacle
+    // Necessary to disable Player movement after collision
+    public PlayerMovement movement;
+    //public WallMovement movement;
+
+    // Stops Player Movement and calls the GameOverScene Method, after Collision with an Obstacle
     void OnCollisionEnter(Collision collisionInfo)
     {
         if (collisionInfo.collider.CompareTag("Obstacle"))
@@ -16,8 +17,15 @@ public class PlayerCollision : MonoBehaviour
             movement.enabled = false;
             Invoke("GameOverScene", 3f);
         }
+        
+        if (collisionInfo.collider.CompareTag("Obstacle"))
+        {
+            movement.enabled = false;
+            Invoke("GameOverScene", 3f);
+        }
     }
 
+    // Changes the Scene to the GameOver Scene
     void GameOverScene()
     {
         SceneManager.LoadScene(1);
