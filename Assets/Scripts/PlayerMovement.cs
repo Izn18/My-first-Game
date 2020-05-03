@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -38,6 +39,12 @@ public class PlayerMovement : MonoBehaviour
         if (rb.position.y < 0.75f)
         {
             movement.enabled = false;
+            Invoke("GameOverScene", 3f);
         }
+    }
+    
+    void GameOverScene()
+    {
+        SceneManager.LoadScene(1);
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerCollision : MonoBehaviour
 {
@@ -13,6 +14,12 @@ public class PlayerCollision : MonoBehaviour
         if (collisionInfo.collider.CompareTag("Obstacle"))
         {
             movement.enabled = false;
+            Invoke("GameOverScene", 3f);
         }
+    }
+
+    void GameOverScene()
+    {
+        SceneManager.LoadScene(1);
     }
 }
