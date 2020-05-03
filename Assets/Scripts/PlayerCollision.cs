@@ -13,6 +13,7 @@ public class PlayerCollision : MonoBehaviour
         if (collisionInfo.collider.CompareTag("Obstacle"))
         {
             movement.enabled = false;
+            FindObjectOfType<GameManager>().EndGame();
         }
     }
 }
